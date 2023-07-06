@@ -11,4 +11,11 @@ jobs:
       - name: Run a one-line script
         run: echo Hello, world!
       - name: second step or task
-        run: echo "hello from step 2"
+        run: |
+          echo "hello from step 2"
+          sleep 10
+      - name: create a file and list it
+        run: |
+          touch gagan.txt
+          ls -l
+          sleep 10
