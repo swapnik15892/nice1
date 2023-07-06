@@ -2,8 +2,6 @@ name: Variable
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
 env:
   home: "home1"
 jobs:
