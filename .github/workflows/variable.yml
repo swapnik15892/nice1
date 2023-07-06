@@ -1,0 +1,21 @@
+name: Variable
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+env:
+  home: "home1"
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run a one-line script
+        run: echo Hello, world!
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo ${{ secrets.password }}
+          echo ${{ vars.username }}
+      - name: Create a file
+        run: echo $home
